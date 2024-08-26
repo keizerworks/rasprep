@@ -4,9 +4,7 @@
 
 
 @layer base {
-  border-border {
-  
-  }
+ 
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -90,27 +88,4 @@
     /* Firefox */
   }
 
-  .gold-shadow {
-    /* @apply shadow-[0px_0px_10px_5px_rgba(255,215,0,0.6)] */
-    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.6)
-  }
-
-
-  button.wallet-adapter-button-trigger {
-    background: #222222;
-    display: flex;
-    gap: 8px;
-    padding: 0 28px 0 28px;
-    width: 100%;
-    font-size: 14px;
-    border-radius: 12px;
-
-
-
-  }
-
-  button.wallet-adapter-button-trigger:hover {
-    background-color: #222222 !important;
-
-  }
 }
