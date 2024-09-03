@@ -3,87 +3,81 @@ import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
   IconArrowLeft,
+
+
   IconFileAnalytics,
-  IconSearch,
-  IconMessageCircle,
-  IconShare,
-  IconHelpCircle,
+  IconUser,
+  IconPhone
 } from "@tabler/icons-react";
-import Navbar from "@/components/Navbar";
 import { IoHomeOutline } from "react-icons/io5";
-import { MdOutlineTimer, MdOutlineContactSupport } from "react-icons/md";
-import { IoAnalyticsOutline } from "react-icons/io5";
-import logo from "@/public/Logo.png";
+import { MdOutlineWorkspacePremium } from "react-icons/md";
+import { MdOutlineLeaderboard } from "react-icons/md";
+import logo from "@/public/Logo.png"
 import Image from "next/image";
+
+
+// import Link from "next/link";
+// import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
 
-export default function RootLayout({ children }: RootLayoutProps) {
+
+export default function () {
   const links = [
     {
-      label: "Account",
-      href: "/dashboard/account",
+      label: "Home",
+      href: "/dashboard/home",
       icon: (
         <IoHomeOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Analytics",
-      href: "/dashboard/analytics",
+      label: "Prelims",
+      href: "/dashboard/prelims",
       icon: (
-        <IoAnalyticsOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <MdOutlineWorkspacePremium className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Recents",
-      href: "/dashboard/recents",
+      label: "Mains",
+      href: "/dashboard/mains", // Ensure you have a settings route if you want to link to it
       icon: (
         <IconFileAnalytics className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Remedials",
-      href: "/dashboard/remedials",
+      label: "Recall",
+      href: "/dashboard/recall", // Ensure you have a settings route if you want to link to it
       icon: (
-        <MdOutlineContactSupport className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <MdOutlineLeaderboard className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Pomodoro",
-      href: "/dashboard/pomodoro",
+      label: "Tests",
+      href: "/dashboard/tests", // Ensure you have a settings route if you want to link to it
       icon: (
-        <MdOutlineTimer className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconUser className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Search",
-      href: "/dashboard/search",
+      label: "Analytics",
+      href: "/dashboard/Analytics", // Ensure you have a settings route if you want to link to it
       icon: (
-        <IconSearch className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconPhone className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Contact",
-      href: "/dashboard/contact",
+      label: "Leaderboard",
+      href: "/dashboard/leaderboard", // Ensure you have a settings route if you want to link to it
       icon: (
-        <IconMessageCircle className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconPhone className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
-      label: "Share App",
-      href: "/dashboard/share",
+      label: "Account",
+      href: "/dashboard/account", // Ensure you have a settings route if you want to link to it
       icon: (
-        <IconShare className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "FAQs",
-      href: "/dashboard/faqs",
-      icon: (
-        <IconHelpCircle className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconPhone className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -101,7 +95,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <div
       className={cn(
         "rounded-md flex flex-col md:flex-row bg-neutral-100 dark:bg-neutral-800 w-full flex-1 max-w-full mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-        "h-screen w-full relative" // Changed to fill full screen height
+        "h-screen w-full" // Changed to fill full screen height
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
@@ -118,34 +112,41 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </Sidebar>
 
       {/* Main content area */}
-      <div className="flex-1 ">
-        
-        <Navbar/>
-        <div className="h-full w-full  p-3">
-        {children}
-        </div>
-        {/* <div className="absolute z-10 top-0"> */}
-          {/* <Navbar/> */}
-        {/* </div> */}
-      </div>
     </div>
   );
 }
 
 export const Logo = () => {
   return (
-    <Image
-      width={150}
-      height={100}
-      className="scale-75"
-      alt="logo"
-      src={logo}
-    />
+    // <Link
+    //   href="#"
+    //   className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+    // >
+    //   <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+    //   <motion.span
+    //     initial={{ opacity: 0 }}
+    //     animate={{ opacity: 1 }}
+    //     className="font-medium text-black dark:text-white whitespace-pre"
+    //   >
+    //     Acet Labs
+    //   </motion.span>
+    // </Link>
+
+    
+    <Image width={150} height={100}  className="scale-75" alt="logo" src={logo}/>
   );
 };
 
 export const LogoIcon = () => {
-  return <div>icon</div>;
+  return (
+    // <Link
+    //   href="#"
+    //   className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+    // >
+    //   <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+    // </Link>
+    <div>icon</div>
+  );
 };
 
 // Dummy dashboard component with content
@@ -173,3 +174,6 @@ const Dashboard = () => {
     </div>
   );
 };
+
+
+

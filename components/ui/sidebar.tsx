@@ -4,6 +4,16 @@ import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import DialogDemo from "../Dialog";
+import Account from "@/components/modals/Account";
+import Analytics from "@/components/modals/Analytics"
+import Contact from "@/components/modals/Contact"
+import FAQs from "@/components/modals/FAQs"
+import Pomodoro from "@/components/modals/Pomodoro"
+import Recents from "@/components/modals/Recents"
+import Remedials from "@/components/modals/Remedials"
+import Search from "@/components/modals/Search"
+import Share from "@/components/modals/Share"
 
 interface Links {
   label: string;
@@ -89,7 +99,7 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden  md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0 border border-r-2  border-y-0 border-l-0",
+          "h-full px-4 py-4 hidden  md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0 border border-r-2  border-y-0 border-l-0 ",
           className
         )}
         animate={{
@@ -166,10 +176,9 @@ export const SidebarLink = ({
 }) => {
   const { open, animate } = useSidebar();
   return (
-    <Link
-      href={link.href}
+    <button
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2 hover:bg-blue-300 px-2 rounded-md",
+        "flex items-center justify-start gap-2   group/sidebar py-2 hover:bg-blue-300 px-2 rounded-md",
         className
       )}
       {...props}
@@ -181,10 +190,19 @@ export const SidebarLink = ({
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
-        className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+        className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre pr-28  flex justify-start  !m-0 "
       >
-        {link.label}
+        {link.label === "Analytics" && <Analytics />}
+        {link.label === "Account" && <Account />}
+        {link.label === "Contact" && <Contact />}
+        {link.label === "FAQs" && <FAQs />}
+        {link.label === "Pomodoro" && <Pomodoro />}
+        {link.label === "Recents" && <Recents />}
+        {link.label === "Remedials" && <Remedials />}
+        {link.label === "Search" && <Search />}
+        {link.label === "Share" && <Share />}
+        {!["Analytics", "Account", "Contact", "FAQs", "Pomodoro", "Recents", "Remedials", "Search", "Share"].includes(link.label) && link.label}
       </motion.span>
-    </Link>
+    </button>
   );
 };

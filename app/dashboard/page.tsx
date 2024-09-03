@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 
 
 export default function page() {
-redirect("./dashboard/home")
+redirect("./dashboard/account")
 }
 
 
