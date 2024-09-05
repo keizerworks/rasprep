@@ -1,47 +1,35 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import SyllabusTracker from "../analytics/SyllabusTracker";
+import Marks from "../analytics/Marks";
+import Streak from "../analytics/Streak";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/dialog";
 
 export default function DialogDemo() {
   return (
+    
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20">Analytics</Button>
+        <Button
+          variant="outline"
+          className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20 "
+        >
+          Analytics
+        </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Analytics</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
+      <DialogContent className="w-auto bg-blue-100 min-w-[30%] max-w-[40%]">
+        <DialogTitle>Analytics</DialogTitle>
+
+        <div className="w-full flex flex-col gap-2 h-[60vh] overflow-y-scroll no-scrollbar">
+          <SyllabusTracker/>
+          <Marks/>
+          <Streak/>
         </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
