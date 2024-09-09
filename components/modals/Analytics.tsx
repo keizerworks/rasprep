@@ -21,7 +21,7 @@ export default function DialogDemo() {
           Analytics
         </Button>
       </DialogTrigger>
-      <DialogContent className="w-auto bg-blue-100 min-w-[30%] max-w-[40%]">
+      <DialogContent className="w-auto bg-blue-200 min-w-[30%] max-w-[40%]">
         <DialogTitle>Analytics</DialogTitle>
 
         <div className="w-full flex flex-col gap-2 h-[60vh] overflow-y-scroll no-scrollbar">

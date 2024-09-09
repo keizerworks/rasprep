@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import MyQueries from "../remedials/MyQueries"
 import {
   Dialog,
   DialogContent,
@@ -10,6 +11,7 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import ComQueries from "../remedials/CommunityQueries"
 
 export default function DialogDemo() {
   return (
@@ -17,30 +19,15 @@ export default function DialogDemo() {
       <DialogTrigger asChild>
         <Button variant="outline" className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20">Remedials</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Remedials</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
+      <DialogContent className="w-auto bg-blue-200 min-w-[40%] max-w-[40%]">
+      <DialogTitle>Remedials</DialogTitle>
+      <div className="w-full flex flex-col gap-2 h-[60vh] overflow-y-scroll no-scrollbar">
+      <MyQueries/>
+      <ComQueries/>
+      </div>
+
+
+       
       </DialogContent>
     </Dialog>
   )

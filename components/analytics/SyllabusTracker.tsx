@@ -8,7 +8,7 @@ export default function SyllabusTracker() {
       </div>
 
       <div className="flex gap-6  text-gray-700 px-5 w-fit rounded-md  text-lg ">
-        <div className="text-center pr-5  border border-y-0 border-l-0 border-r-slate-200 space-y-2 flex flex-col ">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 px-7 rounded-md  ">
           <p className="font-semibold">Prelims</p>
           <div className="relative size-28">
             <svg
@@ -47,7 +47,7 @@ export default function SyllabusTracker() {
             </div>
           </div>
         </div>
-        <div className="text-center space-y-2   flex flex-col">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 px-7 rounded-md ">
           <p className="font-semibold">Mains</p>
           <div className="relative size-28">
             <svg

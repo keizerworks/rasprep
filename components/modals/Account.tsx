@@ -23,7 +23,7 @@ export default function DialogDemo() {
           Account
         </Button>
       </DialogTrigger>
-      <DialogContent className="w-auto bg-blue-100">
+      <DialogContent className="w-auto bg-blue-200">
       <DialogTitle>Account</DialogTitle>
         <div className="w-full flex flex-col">
           <div className="border flex justify-between gap-4  border-neutral-200 bg-white/80 rounded-md mt-3 p-3">

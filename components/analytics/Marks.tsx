@@ -10,11 +10,11 @@ export default function Marks() {
       <div className="mr-auto font-semibold text-neutral-700">Average Marks</div>
       
       <div className="flex gap-6  text-gray-700 px-5 w-fit rounded-md  text-lg ">
-        <div className="text-center pr-5  border border-y-0 border-l-0 border-r-slate-200 space-y-1 flex flex-col ">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 px-7 rounded-md ">
           <p className="font-semibold">Prelims</p>
             <p className="text-blue-500 font-semibold text-4xl">86</p>
         </div>
-        <div className="text-center pr-5  space-y-1 flex flex-col ">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 px-9 rounded-md ">
           <p className="font-semibold">Mains</p>
             <p className="text-blue-500 font-semibold text-4xl">73</p>
         </div>

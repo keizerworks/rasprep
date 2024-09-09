@@ -2,16 +2,16 @@ import React from "react";
 
 export default function Streak() {
   return (
-    <div className="border flex flex-col justify-between gap-4  border-neutral-200 bg-white/80 rounded-md items-center   p-3">
+    <div className="border flex flex-col justify-between gap-4  border-neutral-200 bg-white/85 rounded-md items-center   p-3">
       <div className="font-bold  underline underline-offset-2 mr-auto">
         Streak
       </div>
       <div className="flex gap-6  text-gray-700 px-5 w-fit rounded-md  text-lg ">
-        <div className="text-center pr-5  border border-y-0 border-l-0 border-r-slate-200 space-y-1 flex flex-col ">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 rounded-md ">
           <p className="font-semibold">Longest Streak</p>
             <p className="text-blue-500 font-semibold text-4xl">90</p>
         </div>
-        <div className="text-center pr-5  space-y-1 flex flex-col ">
+        <div className="text-center   space-y-1 flex flex-col border border-neutral-200 bg-white p-3 rounded-md">
           <p className="font-semibold">Current Streak</p>
             <p className="text-blue-500 font-semibold text-4xl">43</p>
         </div>
