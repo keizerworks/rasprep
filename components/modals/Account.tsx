@@ -18,14 +18,14 @@ export default function DialogDemo() {
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20"
+          className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20 text-white"
         >
           Account
         </Button>
       </DialogTrigger>
-      <DialogContent className="w-auto bg-blue-200">
-      <DialogTitle>Account</DialogTitle>
-        <div className="w-full flex flex-col">
+      <DialogContent className="w-auto bg-[#365496]">
+      <DialogTitle className="text-white">Account</DialogTitle>
+      <div className="w-full flex flex-col">
           <div className="border flex justify-between gap-4  border-neutral-200 bg-white/80 rounded-md mt-3 p-3">
             <div className="h-full space-y-1">
             <p>

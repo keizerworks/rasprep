@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link
             key={idx}
             href={item.link}
-            className={`border hover:bg-blue-300 border-r-neutral-400 border-y-0 py-2 px-6 duration-700 ${idx === 0 ? 'rounded-l-full' : ''} ${idx === navigate.length - 1 ? 'rounded-r-full' : ''}`}
+            className={`border hover:bg-[#365496] hover:text-white hover:font-semibold border-r-neutral-400 border-y-0 py-2 px-6 duration-700 ${idx === 0 ? 'rounded-l-full' : ''} ${idx === navigate.length - 1 ? 'rounded-r-full' : ''}`}
           >
             {item.name}
           </Link>

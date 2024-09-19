@@ -19,8 +19,8 @@ export default function DialogDemo() {
       <DialogTrigger asChild>
         <Button variant="outline" className="bg-transparent hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20">Remedials</Button>
       </DialogTrigger>
-      <DialogContent className="w-auto bg-blue-200 min-w-[40%] max-w-[40%]">
-      <DialogTitle>Remedials</DialogTitle>
+      <DialogContent className="w-auto bg-[#365496] min-w-[40%] max-w-[40%]">
+      <DialogTitle className="text-white">Remedials</DialogTitle>
       <div className="w-full flex flex-col gap-2 h-[60vh] overflow-y-scroll no-scrollbar">
       <MyQueries/>
       <ComQueries/>

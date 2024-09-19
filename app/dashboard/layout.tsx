@@ -27,70 +27,70 @@ export default function RootLayout({ children }: RootLayoutProps) {
       label: "Account",
       href: "/dashboard/account",
       icon: (
-        <IoHomeOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IoHomeOutline className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Analytics",
       href: "/dashboard/analytics",
       icon: (
-        <IoAnalyticsOutline className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IoAnalyticsOutline className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Recents",
       href: "/dashboard/recents",
       icon: (
-        <IconFileAnalytics className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconFileAnalytics className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Remedials",
       href: "/dashboard/remedials",
       icon: (
-        <MdOutlineContactSupport className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <MdOutlineContactSupport className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Pomodoro",
       href: "/dashboard/pomodoro",
       icon: (
-        <MdOutlineTimer className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <MdOutlineTimer className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Search",
       href: "/dashboard/search",
       icon: (
-        <IconSearch className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconSearch className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Contact",
       href: "/dashboard/contact",
       icon: (
-        <IconMessageCircle className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconMessageCircle className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Share App",
       href: "/dashboard/share",
       icon: (
-        <IconShare className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconShare className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "FAQs",
       href: "/dashboard/faqs",
       icon: (
-        <IconHelpCircle className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconHelpCircle className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Logout",
       href: "/",
       icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconArrowLeft className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
   ];
