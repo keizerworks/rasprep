@@ -70,6 +70,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .box {
+    @apply   space-y-5 flex flex-col border shadow-sm p-5 items-center border-neutral-200 bg-white/80 w-64 h-56 rounded-md 
+  }
 }
 
 

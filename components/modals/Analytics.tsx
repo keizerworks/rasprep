@@ -12,24 +12,15 @@ import {
 export default function DialogDemo() {
   return (
     
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          className="bg-transparent hover:text-white hover:bg-transparent outline-none py-0 pl-0  h-6 border-none w-full pr-20 "
-        >
-          Analytics
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="w-auto bg-[#365496] min-w-[30%] max-w-[40%]">
-        <DialogTitle className="text-white">Analytics</DialogTitle>
+      
+      <div className=" bg-[#365496] ">
+        <p className="text-white">Analytics</p>
 
         <div className="w-full flex flex-col gap-2 h-[60vh] overflow-y-scroll no-scrollbar">
           <SyllabusTracker/>
           <Marks/>
           <Streak/>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
   );
 }

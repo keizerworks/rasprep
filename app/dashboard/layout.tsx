@@ -59,8 +59,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       ),
     },
     {
-      label: "Search",
-      href: "/dashboard/search",
+      label: "Free Content",
+      href: "/dashboard/freeContent",
       icon: (
         <IconSearch className="text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
